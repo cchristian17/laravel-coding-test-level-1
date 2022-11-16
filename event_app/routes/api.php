@@ -19,14 +19,16 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::prefix('v1')->group(function () {
 
-Route::prefix('events')->group(function () {
-    Route::get('', [EventController::class, 'index'])->name('api.event.index');
-    Route::get('active-events', [EventController::class, 'activeEvents'])
-        ->name('api.event.active-events');
-    Route::get('{id}', [EventController::class, 'show'])->name('api.event.show');
-    Route::post('', [EventController::class, 'store'])->name('api.event.store');
-    Route::patch('{id}', [EventController::class, 'edit'])->name('api.event.patch');
-    Route::put('{id}', [EventController::class, 'update'])->name('api.event.update');
-    Route::delete('{id}', [EventController::class, 'destroy'])->name('api.event.delete');
+    Route::prefix('events')->group(function () {
+        Route::get('', [EventController::class, 'index'])->name('api.event.index');
+        Route::get('active-events', [EventController::class, 'activeEvents'])
+            ->name('api.event.active-events');
+        Route::get('{id}', [EventController::class, 'show'])->name('api.event.show');
+        Route::post('', [EventController::class, 'store'])->name('api.event.store');
+        Route::patch('{id}', [EventController::class, 'edit'])->name('api.event.patch');
+        Route::put('{id}', [EventController::class, 'update'])->name('api.event.update');
+        Route::delete('{id}', [EventController::class, 'destroy'])->name('api.event.delete');
+    });
 });
