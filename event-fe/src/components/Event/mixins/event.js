@@ -1,9 +1,11 @@
 import ApiService from "@/services/api";
+import Cookies from "js-cookie";
 
 export default {
   name: "Index",
   data() {
     return {
+      isAuthenticated: !!Cookies.get('access_token'),
       events: [],
       page: 1,
       perPage: 5,
@@ -11,6 +13,7 @@ export default {
       sortOrder: 'ASC',
       total: 0,
       isLoading: true,
+      search: null,
     }
   },
   methods: {
@@ -23,6 +26,11 @@ export default {
         `per_page=${this.perPage}`,
         `page=${this.page}`,
       ]
+
+      if (this.search) {
+        params.push(`search=${this.search}`)
+      }
+
       await ApiService
         .get(`events?${params.join('&')}`)
         .then(response => {
@@ -45,8 +53,13 @@ export default {
       this.page = page
       await this.loadEvents()
     },
+    async searchEvent() {
+      await this.loadEvents()
+    }
   },
   async mounted() {
+    this.page = 0
+    this.total = 0
     await this.loadEvents()
   }
 }
