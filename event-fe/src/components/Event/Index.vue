@@ -8,6 +8,7 @@
           icon-left="plus"
           tag="router-link"
           to="/events/create"
+          v-if="isAuthenticated"
         >
           Add Event
         </b-button>
@@ -16,7 +17,7 @@
         <b-input
           v-model="search"
           icon-right="magnify"
-          placeholder="Search"
+          placeholder="Search Event Name"
           @keydown.native.enter="searchEvent"
           icon-right-clickable
           @icon-right-click="searchEvent"
@@ -68,6 +69,7 @@
           <b-tooltip
             label="Edit"
             type="is-light"
+            v-if="isAuthenticated"
           >
             <b-button
               type="is-text"
@@ -86,67 +88,9 @@
 </template>
 
 <script>
-import ApiService from "@/services/api";
+import mixin from "./mixins/event"
 
 export default {
-  name: "Index",
-  data() {
-    return {
-      events: [],
-      page: 1,
-      perPage: 5,
-      sortField: 'id',
-      sortOrder: 'ASC',
-      total: 0,
-      isLoading: true,
-      search: null,
-    }
-  },
-  methods: {
-    async loadEvents() {
-      this.isLoading = true
-      let params = [
-        `paginated=1`,
-        `sort_field=${this.sortField}`,
-        `sort_order=${this.sortOrder}`,
-        `per_page=${this.perPage}`,
-        `page=${this.page}`,
-      ]
-
-      if (this.search) {
-        params.push(`search=${this.search}`)
-      }
-
-      await ApiService
-        .get(`events?${params.join('&')}`)
-        .then(response => {
-          this.events = response.data.data
-          this.total = response.data.total
-        })
-        .catch((e) => {
-          console.log(e)
-        })
-        .finally(() => {
-          this.isLoading = false
-        })
-    },
-    async onSort(field, order) {
-      this.sortField = field
-      this.sortOrder = order
-      await this.loadEvents()
-    },
-    async onPageChange(page) {
-      this.page = page
-      await this.loadEvents()
-    },
-    async searchEvent() {
-      await this.loadEvents()
-    }
-  },
-  async mounted() {
-    this.page = 0
-    this.total = 0
-    await this.loadEvents()
-  }
-}
+  mixins: [mixin],
+};
 </script>

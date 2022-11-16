@@ -26,6 +26,7 @@ class RepositoryServiceProvider extends ServiceProvider
 
         $models = array(
             'Base',
+            'User',
             'Event'
         );
 
