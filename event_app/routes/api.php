@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventController;
 
 /*
@@ -15,20 +16,28 @@ use App\Http\Controllers\EventController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
 
 Route::prefix('v1')->group(function () {
+    Route::post('login', [AuthController::class, 'login'])->name('api.auth.login');
+    Route::post('register', [AuthController::class, 'register'])->name('api.auth.login');
 
     Route::prefix('events')->group(function () {
         Route::get('', [EventController::class, 'index'])->name('api.event.index');
         Route::get('active-events', [EventController::class, 'activeEvents'])
             ->name('api.event.active-events');
         Route::get('{id}', [EventController::class, 'show'])->name('api.event.show');
-        Route::post('', [EventController::class, 'store'])->name('api.event.store');
-        Route::patch('{id}', [EventController::class, 'edit'])->name('api.event.patch');
-        Route::put('{id}', [EventController::class, 'update'])->name('api.event.update');
-        Route::delete('{id}', [EventController::class, 'destroy'])->name('api.event.delete');
+
+        // Only Admin can CREATE, UPDATE, DELETE Event
+        Route::group(['middleware' => 'auth:api'], function () {
+            Route::post('', [EventController::class, 'store'])->name('api.event.store');
+            Route::patch('{id}', [EventController::class, 'edit'])->name('api.event.patch');
+            Route::put('{id}', [EventController::class, 'update'])->name('api.event.update');
+            Route::delete('{id}', [EventController::class, 'destroy'])->name('api.event.delete');
+        });
+    });
+
+    Route::group(['middleware' => 'auth:api'], function () {
+        Route::get('logout', [AuthController::class, 'logout'])->name('api.auth.logout');
+        Route::get('user-token', [AuthController::class, 'userToken'])->name('api.auth.user-token');
     });
 });

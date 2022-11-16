@@ -4,20 +4,38 @@
       <template #brand>
         <b-navbar-item
           tag="router-link"
-          :to="{ path: '/' }"
+          :to="{ path: '/events' }"
         >
           Event App
         </b-navbar-item>
       </template>
       <template #end>
         <b-navbar-item tag="div">
-          <div class="buttons">
-            <a class="button is-primary">
+          <div v-if="isAuthenticated" class="buttons">
+            <span class="has-text-weight-semibold mr-3">
+              Hi, {{ user.name }}
+            </span>
+            <b-button
+              type="is-danger"
+              @click="logout"
+            >
+              Logout
+            </b-button>
+          </div>
+          <div v-else class="buttons">
+            <b-button
+              class="is-primary"
+              @click="signup"
+            >
               <strong>Sign up</strong>
-            </a>
-            <a class="button is-light">
+            </b-button>
+            <b-button
+              class="is-light"
+              tag="router-link"
+              to="/login"
+            >
               Log in
-            </a>
+            </b-button>
           </div>
         </b-navbar-item>
       </template>
@@ -31,9 +49,63 @@
 </template>
 
 <script>
+import Cookies from 'js-cookie';
+import ApiService from "@/services/api";
 
 export default {
   name: 'App',
+
+  data() {
+    return {
+      isAuthenticated: !!Cookies.get('access_token'),
+      user: {
+        name: null,
+      },
+    }
+  },
+
+  methods : {
+    getUser() {
+      ApiService
+        .get(`user-token`)
+        .then(response => {
+          this.user = response.data.data.user
+        })
+        .catch((e) => {
+          console.log(e)
+        })
+    },
+    signup() {
+      this.$buefy.toast.open({
+        message: 'Feature is not ready yet.',
+        type: "is-danger",
+        position: "is-bottom",
+      })
+    },
+    logout() {
+      ApiService
+        .get(`logout`)
+        .then(() => {
+          this.$buefy.toast.open({
+            message: 'Logout Success!',
+            type: 'is-success',
+          })
+          this.$router.go()
+        })
+        .catch((e) => {
+          console.log(e)
+        })
+        .finally(() => {
+          Cookies.remove('access_token')
+          this.isAuthenticated = false
+        })
+    }
+  },
+  mounted() {
+    if (this.isAuthenticated) {
+      this.getUser()
+    }
+  }
 }
 </script>
 

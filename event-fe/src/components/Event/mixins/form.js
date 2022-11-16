@@ -50,7 +50,7 @@ export default {
             message: 'Event Updated Successfully!',
             type: 'is-success',
           })
-          this.$router.push({ path: '/' })
+          this.$router.push({ path: '/events' })
         })
         .catch((e) => {
           this.$buefy.toast.open({
@@ -81,7 +81,7 @@ export default {
             message: 'Event Created Successfully!',
             type: 'is-success',
           })
-          this.$router.push({ path: '/' })
+          this.$router.push({ path: '/events' })
         })
         .catch((e) => {
           this.$buefy.toast.open({
@@ -96,11 +96,14 @@ export default {
     },
 
     async submit() {
-      if (this.$route.params.id) {
-        await this.editEvent(this.$route.params.id)
-      } else {
-        await this.storeEvent()
-      }
+      this.$refs.observer.validate().then(async (success) => {
+        if (success) {
+          if (this.$route.params.id) {
+            await this.editEvent(this.$route.params.id)
+          } else {
+            await this.storeEvent()
+          }        }
+      });
     },
   },
   async mounted() {

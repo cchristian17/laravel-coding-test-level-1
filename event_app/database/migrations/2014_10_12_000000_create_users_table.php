@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -23,9 +24,12 @@ return new class extends Migration
             $table->string('place_of_birth');
             $table->date('date_of_birth');
             $table->string('phone_number')->nullable();
-            $table->rememberToken();
+            $table->tinyInteger('role')->default('0')
+                ->comment('0:User, 1:Admin');
 
-            $table->timestamps();
+            $table->rememberToken();
+            $table->dateTime('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->dateTime('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
             $table->softDeletes();
         });
     }
