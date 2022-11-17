@@ -1,0 +1,2075 @@
+{
+	"info": {
+		"_postman_id": "96fac09d-ce77-45f8-932b-6e28fe753781",
+		"name": "Event App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10789821"
+	},
+	"item": [
+		{
+			"name": "Event",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/events?paginated=1&sort_field=name&sort_order=DESC&per_page=20&page=1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"events"
+							],
+							"query": [
+								{
+									"key": "paginated",
+									"value": "1",
+									"description": "fillable : 1,0 | default : 1"
+								},
+								{
+									"key": "sort_field",
+									"value": "name",
+									"description": "fillable : name, venue, description, start_at, end_at | default : id"
+								},
+								{
+									"key": "sort_order",
+									"value": "DESC",
+									"description": "fillable : ASC, DESC | defalt : ASC "
+								},
+								{
+									"key": "per_page",
+									"value": "20",
+									"description": "optional | default : 20"
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "optional | default : 1"
+								},
+								{
+									"key": "search",
+									"value": "",
+									"description": "optional | search by event's name",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/events?paginated=0&sort_field=name&sort_order=asc&per_page=5&page=1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"events"
+									],
+									"query": [
+										{
+											"key": "paginated",
+											"value": "0",
+											"description": "fillable : 1,0 | default : 1"
+										},
+										{
+											"key": "sort_field",
+											"value": "name",
+											"description": "fillable : name, venue, description, start_at, end_at | default : id"
+										},
+										{
+											"key": "sort_order",
+											"value": "asc",
+											"description": "fillable : ASC, DESC | defalt : ASC "
+										},
+										{
+											"key": "per_page",
+											"value": "5",
+											"description": "optional | default : 20"
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"description": "optional | default : 1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 05:11:58 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 05:11:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"0c4b745d-9f8e-43cc-b211-9a9eff2479b4\",\n            \"name\": \"Centralized Mobile Parallelism\",\n            \"venue\": \"953 Moen Loaf\",\n            \"description\": \"Officiis aut maxime inventore iusto. Et voluptatem blanditiis amet sequi sed quibusdam consequatur. Quis velit harum voluptas et exercitationem repudiandae qui.\",\n            \"start_at\": \"2022-12-13\",\n            \"end_at\": \"2022-12-15\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"c0309e50-0e26-4823-89e2-b1f074a8986c\",\n            \"name\": \"Customer-focused Bandwidth-monitored Circuit\",\n            \"venue\": \"88539 Estevan Cape\",\n            \"description\": \"Voluptatibus error quia eligendi id consectetur animi libero. Nobis aut quidem doloremque et voluptas. Corporis iste totam architecto voluptates commodi tenetur.\",\n            \"start_at\": \"2022-12-25\",\n            \"end_at\": \"2023-01-02\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"a758a87c-b4fd-4639-94e3-d48266019b20\",\n            \"name\": \"Decentralized Reciprocal Access\",\n            \"venue\": \"22769 Hills Garden Apt. 222\",\n            \"description\": \"Quia consequuntur neque delectus voluptate nam facilis. Voluptatum et dolorem asperiores necessitatibus. Vitae ipsum quod cupiditate cum.\",\n            \"start_at\": \"2022-11-13\",\n            \"end_at\": \"2022-11-26\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"db0837ac-cc22-480a-b805-b6318b0cc660\",\n            \"name\": \"Implemented Attitude-oriented Flexibility\",\n            \"venue\": \"47349 Heaney Ford\",\n            \"description\": \"Voluptatibus eum officia sint. Quod quidem officia id vitae ratione et.\",\n            \"start_at\": \"2022-12-20\",\n            \"end_at\": \"2022-12-23\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"8129bb99-1032-4c6c-9505-6ac186b60791\",\n            \"name\": \"Monitored Tangible Matrices\",\n            \"venue\": \"965 Erdman Road Apt. 395\",\n            \"description\": \"Temporibus dolores voluptatibus nesciunt laudantium. Error possimus soluta officia consequuntur aut illum. Neque rerum quia officia ipsum.\",\n            \"start_at\": \"2022-11-20\",\n            \"end_at\": \"2022-12-11\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"f4a7f5cf-5fed-4a9a-9712-c4e57b543da6\",\n            \"name\": \"Persevering Contextually-based Function\",\n            \"venue\": \"701 Miller Brooks\",\n            \"description\": \"Ducimus quo nobis animi voluptatem iste debitis tenetur. Placeat fuga quaerat beatae odit molestias.\",\n            \"start_at\": \"2022-09-22\",\n            \"end_at\": \"2022-12-12\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"c75c58ab-a367-4388-bafd-00a792a6ea24\",\n            \"name\": \"Reactive Analyzing Localareanetwork\",\n            \"venue\": \"1373 Berenice Creek\",\n            \"description\": \"Ut reprehenderit rem et. Non quia ut voluptatem et cupiditate quia. Reprehenderit sed aut labore beatae quo dolore.\",\n            \"start_at\": \"2022-10-29\",\n            \"end_at\": \"2022-12-11\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"e36ec90b-72a1-4af7-baab-66e795b173fe\",\n            \"name\": \"Reduced Encompassing Pricingstructure\",\n            \"venue\": \"4499 Beahan Skyway Suite 271\",\n            \"description\": \"In dolor aut deserunt consequatur ipsa rerum. Qui sint et labore aut sunt. Ut eos earum perferendis.\",\n            \"start_at\": \"2022-12-28\",\n            \"end_at\": \"2023-01-03\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Index Paginated",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/events?paginated=1&sort_field=name&sort_order=asc&per_page=5&page=1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"events"
+									],
+									"query": [
+										{
+											"key": "paginated",
+											"value": "1",
+											"description": "fillable : 1,0 | default : 1"
+										},
+										{
+											"key": "sort_field",
+											"value": "name",
+											"description": "fillable : name, venue, description, start_at, end_at | default : id"
+										},
+										{
+											"key": "sort_order",
+											"value": "asc",
+											"description": "fillable : ASC, DESC | defalt : ASC "
+										},
+										{
+											"key": "per_page",
+											"value": "5",
+											"description": "optional | default : 20"
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"description": "optional | default : 1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 05:13:34 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 05:13:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": \"0c4b745d-9f8e-43cc-b211-9a9eff2479b4\",\n            \"name\": \"Centralized Mobile Parallelism\",\n            \"venue\": \"953 Moen Loaf\",\n            \"description\": \"Officiis aut maxime inventore iusto. Et voluptatem blanditiis amet sequi sed quibusdam consequatur. Quis velit harum voluptas et exercitationem repudiandae qui.\",\n            \"start_at\": \"2022-12-13\",\n            \"end_at\": \"2022-12-15\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"c0309e50-0e26-4823-89e2-b1f074a8986c\",\n            \"name\": \"Customer-focused Bandwidth-monitored Circuit\",\n            \"venue\": \"88539 Estevan Cape\",\n            \"description\": \"Voluptatibus error quia eligendi id consectetur animi libero. Nobis aut quidem doloremque et voluptas. Corporis iste totam architecto voluptates commodi tenetur.\",\n            \"start_at\": \"2022-12-25\",\n            \"end_at\": \"2023-01-02\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"a758a87c-b4fd-4639-94e3-d48266019b20\",\n            \"name\": \"Decentralized Reciprocal Access\",\n            \"venue\": \"22769 Hills Garden Apt. 222\",\n            \"description\": \"Quia consequuntur neque delectus voluptate nam facilis. Voluptatum et dolorem asperiores necessitatibus. Vitae ipsum quod cupiditate cum.\",\n            \"start_at\": \"2022-11-13\",\n            \"end_at\": \"2022-11-26\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"db0837ac-cc22-480a-b805-b6318b0cc660\",\n            \"name\": \"Implemented Attitude-oriented Flexibility\",\n            \"venue\": \"47349 Heaney Ford\",\n            \"description\": \"Voluptatibus eum officia sint. Quod quidem officia id vitae ratione et.\",\n            \"start_at\": \"2022-12-20\",\n            \"end_at\": \"2022-12-23\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"8129bb99-1032-4c6c-9505-6ac186b60791\",\n            \"name\": \"Monitored Tangible Matrices\",\n            \"venue\": \"965 Erdman Road Apt. 395\",\n            \"description\": \"Temporibus dolores voluptatibus nesciunt laudantium. Error possimus soluta officia consequuntur aut illum. Neque rerum quia officia ipsum.\",\n            \"start_at\": \"2022-11-20\",\n            \"end_at\": \"2022-12-11\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost:8000/api/events?page=1\",\n    \"from\": 1,\n    \"last_page\": 2,\n    \"last_page_url\": \"http://localhost:8000/api/events?page=2\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:8000/api/events?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": \"http://localhost:8000/api/events?page=2\",\n            \"label\": \"2\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:8000/api/events?page=2\",\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": \"http://localhost:8000/api/events?page=2\",\n    \"path\": \"http://localhost:8000/api/events\",\n    \"per_page\": 5,\n    \"prev_page_url\": null,\n    \"to\": 5,\n    \"total\": 8\n}"
+						}
+					]
+				},
+				{
+					"name": "Active Events",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/events/active-events?paginated=1&sort_field=name&sort_order=asc",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"events",
+								"active-events"
+							],
+							"query": [
+								{
+									"key": "paginated",
+									"value": "1",
+									"description": "fillable : 1,0 | default : 1"
+								},
+								{
+									"key": "sort_field",
+									"value": "name",
+									"description": "fillable : name, venue, description, start_at, end_at | default : id"
+								},
+								{
+									"key": "sort_order",
+									"value": "asc",
+									"description": "fillable : ASC, DESC | defalt : ASC "
+								},
+								{
+									"key": "per_page",
+									"value": "5",
+									"description": "optional | default : 20",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "optional | default : 1",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "",
+									"description": "optional | search by event's name",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/events?paginated=0&sort_field=name&sort_order=asc&per_page=5&page=1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"events"
+									],
+									"query": [
+										{
+											"key": "paginated",
+											"value": "0",
+											"description": "fillable : 1,0 | default : 1"
+										},
+										{
+											"key": "sort_field",
+											"value": "name",
+											"description": "fillable : name, venue, description, start_at, end_at | default : id"
+										},
+										{
+											"key": "sort_order",
+											"value": "asc",
+											"description": "fillable : ASC, DESC | defalt : ASC "
+										},
+										{
+											"key": "per_page",
+											"value": "5",
+											"description": "optional | default : 20"
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"description": "optional | default : 1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 05:11:58 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 05:11:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"0c4b745d-9f8e-43cc-b211-9a9eff2479b4\",\n            \"name\": \"Centralized Mobile Parallelism\",\n            \"venue\": \"953 Moen Loaf\",\n            \"description\": \"Officiis aut maxime inventore iusto. Et voluptatem blanditiis amet sequi sed quibusdam consequatur. Quis velit harum voluptas et exercitationem repudiandae qui.\",\n            \"start_at\": \"2022-12-13\",\n            \"end_at\": \"2022-12-15\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"c0309e50-0e26-4823-89e2-b1f074a8986c\",\n            \"name\": \"Customer-focused Bandwidth-monitored Circuit\",\n            \"venue\": \"88539 Estevan Cape\",\n            \"description\": \"Voluptatibus error quia eligendi id consectetur animi libero. Nobis aut quidem doloremque et voluptas. Corporis iste totam architecto voluptates commodi tenetur.\",\n            \"start_at\": \"2022-12-25\",\n            \"end_at\": \"2023-01-02\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"a758a87c-b4fd-4639-94e3-d48266019b20\",\n            \"name\": \"Decentralized Reciprocal Access\",\n            \"venue\": \"22769 Hills Garden Apt. 222\",\n            \"description\": \"Quia consequuntur neque delectus voluptate nam facilis. Voluptatum et dolorem asperiores necessitatibus. Vitae ipsum quod cupiditate cum.\",\n            \"start_at\": \"2022-11-13\",\n            \"end_at\": \"2022-11-26\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"db0837ac-cc22-480a-b805-b6318b0cc660\",\n            \"name\": \"Implemented Attitude-oriented Flexibility\",\n            \"venue\": \"47349 Heaney Ford\",\n            \"description\": \"Voluptatibus eum officia sint. Quod quidem officia id vitae ratione et.\",\n            \"start_at\": \"2022-12-20\",\n            \"end_at\": \"2022-12-23\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"8129bb99-1032-4c6c-9505-6ac186b60791\",\n            \"name\": \"Monitored Tangible Matrices\",\n            \"venue\": \"965 Erdman Road Apt. 395\",\n            \"description\": \"Temporibus dolores voluptatibus nesciunt laudantium. Error possimus soluta officia consequuntur aut illum. Neque rerum quia officia ipsum.\",\n            \"start_at\": \"2022-11-20\",\n            \"end_at\": \"2022-12-11\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"f4a7f5cf-5fed-4a9a-9712-c4e57b543da6\",\n            \"name\": \"Persevering Contextually-based Function\",\n            \"venue\": \"701 Miller Brooks\",\n            \"description\": \"Ducimus quo nobis animi voluptatem iste debitis tenetur. Placeat fuga quaerat beatae odit molestias.\",\n            \"start_at\": \"2022-09-22\",\n            \"end_at\": \"2022-12-12\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"c75c58ab-a367-4388-bafd-00a792a6ea24\",\n            \"name\": \"Reactive Analyzing Localareanetwork\",\n            \"venue\": \"1373 Berenice Creek\",\n            \"description\": \"Ut reprehenderit rem et. Non quia ut voluptatem et cupiditate quia. Reprehenderit sed aut labore beatae quo dolore.\",\n            \"start_at\": \"2022-10-29\",\n            \"end_at\": \"2022-12-11\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"e36ec90b-72a1-4af7-baab-66e795b173fe\",\n            \"name\": \"Reduced Encompassing Pricingstructure\",\n            \"venue\": \"4499 Beahan Skyway Suite 271\",\n            \"description\": \"In dolor aut deserunt consequatur ipsa rerum. Qui sint et labore aut sunt. Ut eos earum perferendis.\",\n            \"start_at\": \"2022-12-28\",\n            \"end_at\": \"2023-01-03\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Index Paginated",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/events?paginated=1&sort_field=name&sort_order=asc&per_page=5&page=1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"events"
+									],
+									"query": [
+										{
+											"key": "paginated",
+											"value": "1",
+											"description": "fillable : 1,0 | default : 1"
+										},
+										{
+											"key": "sort_field",
+											"value": "name",
+											"description": "fillable : name, venue, description, start_at, end_at | default : id"
+										},
+										{
+											"key": "sort_order",
+											"value": "asc",
+											"description": "fillable : ASC, DESC | defalt : ASC "
+										},
+										{
+											"key": "per_page",
+											"value": "5",
+											"description": "optional | default : 20"
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"description": "optional | default : 1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 05:13:34 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 05:13:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"current_page\": 1,\n    \"data\": [\n        {\n            \"id\": \"0c4b745d-9f8e-43cc-b211-9a9eff2479b4\",\n            \"name\": \"Centralized Mobile Parallelism\",\n            \"venue\": \"953 Moen Loaf\",\n            \"description\": \"Officiis aut maxime inventore iusto. Et voluptatem blanditiis amet sequi sed quibusdam consequatur. Quis velit harum voluptas et exercitationem repudiandae qui.\",\n            \"start_at\": \"2022-12-13\",\n            \"end_at\": \"2022-12-15\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"c0309e50-0e26-4823-89e2-b1f074a8986c\",\n            \"name\": \"Customer-focused Bandwidth-monitored Circuit\",\n            \"venue\": \"88539 Estevan Cape\",\n            \"description\": \"Voluptatibus error quia eligendi id consectetur animi libero. Nobis aut quidem doloremque et voluptas. Corporis iste totam architecto voluptates commodi tenetur.\",\n            \"start_at\": \"2022-12-25\",\n            \"end_at\": \"2023-01-02\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"a758a87c-b4fd-4639-94e3-d48266019b20\",\n            \"name\": \"Decentralized Reciprocal Access\",\n            \"venue\": \"22769 Hills Garden Apt. 222\",\n            \"description\": \"Quia consequuntur neque delectus voluptate nam facilis. Voluptatum et dolorem asperiores necessitatibus. Vitae ipsum quod cupiditate cum.\",\n            \"start_at\": \"2022-11-13\",\n            \"end_at\": \"2022-11-26\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"db0837ac-cc22-480a-b805-b6318b0cc660\",\n            \"name\": \"Implemented Attitude-oriented Flexibility\",\n            \"venue\": \"47349 Heaney Ford\",\n            \"description\": \"Voluptatibus eum officia sint. Quod quidem officia id vitae ratione et.\",\n            \"start_at\": \"2022-12-20\",\n            \"end_at\": \"2022-12-23\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        },\n        {\n            \"id\": \"8129bb99-1032-4c6c-9505-6ac186b60791\",\n            \"name\": \"Monitored Tangible Matrices\",\n            \"venue\": \"965 Erdman Road Apt. 395\",\n            \"description\": \"Temporibus dolores voluptatibus nesciunt laudantium. Error possimus soluta officia consequuntur aut illum. Neque rerum quia officia ipsum.\",\n            \"start_at\": \"2022-11-20\",\n            \"end_at\": \"2022-12-11\",\n            \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n            \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n        }\n    ],\n    \"first_page_url\": \"http://localhost:8000/api/events?page=1\",\n    \"from\": 1,\n    \"last_page\": 2,\n    \"last_page_url\": \"http://localhost:8000/api/events?page=2\",\n    \"links\": [\n        {\n            \"url\": null,\n            \"label\": \"&laquo; Previous\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:8000/api/events?page=1\",\n            \"label\": \"1\",\n            \"active\": true\n        },\n        {\n            \"url\": \"http://localhost:8000/api/events?page=2\",\n            \"label\": \"2\",\n            \"active\": false\n        },\n        {\n            \"url\": \"http://localhost:8000/api/events?page=2\",\n            \"label\": \"Next &raquo;\",\n            \"active\": false\n        }\n    ],\n    \"next_page_url\": \"http://localhost:8000/api/events?page=2\",\n    \"path\": \"http://localhost:8000/api/events\",\n    \"per_page\": 5,\n    \"prev_page_url\": null,\n    \"to\": 5,\n    \"total\": 8\n}"
+						}
+					]
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/events/cdd0e310-fcc1-447b-8550-f87a8a0a0628",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"events",
+								"cdd0e310-fcc1-447b-8550-f87a8a0a0628"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Show",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/events/0c4b745d-9f8e-43cc-b211-9a9eff2479b4",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"events",
+										"0c4b745d-9f8e-43cc-b211-9a9eff2479b4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 05:13:51 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 05:13:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"0c4b745d-9f8e-43cc-b211-9a9eff2479b4\",\n    \"name\": \"Centralized Mobile Parallelism\",\n    \"venue\": \"953 Moen Loaf\",\n    \"description\": \"Officiis aut maxime inventore iusto. Et voluptatem blanditiis amet sequi sed quibusdam consequatur. Quis velit harum voluptas et exercitationem repudiandae qui.\",\n    \"start_at\": \"2022-12-13\",\n    \"end_at\": \"2022-12-15\",\n    \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n    \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/events/99",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"events",
+										"99"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 05:13:59 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 05:13:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "54"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"No query results for model [App\\\\Models\\\\Event] 99\",\n    \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\NotFoundHttpException\",\n    \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n    \"line\": 391,\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n            \"line\": 367,\n            \"function\": \"prepareException\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Pipeline.php\",\n            \"line\": 51,\n            \"function\": \"render\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 143,\n            \"function\": \"handleException\",\n            \"class\": \"Illuminate\\\\Routing\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings.php\",\n            \"line\": 50,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 126,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 102,\n            \"function\": \"handleRequest\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 54,\n            \"function\": \"handleRequestUsingNamedLimiter\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 728,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 705,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 669,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 658,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 190,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 165,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 134,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\public\\\\index.php\",\n            \"line\": 52,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\resources\\\\server.php\",\n            \"line\": 16,\n            \"function\": \"require_once\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Justin Bieber Concert Tour",
+									"description": "required | string",
+									"type": "text"
+								},
+								{
+									"key": "venue",
+									"value": "Madison Square Garden ",
+									"description": "required | string",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Justin Bieber has officially suspended the remaining of his “Justice World Tour”. Check in with your point of purchase for refunds for your show dates.",
+									"description": "optional | string",
+									"type": "text"
+								},
+								{
+									"key": "start_at",
+									"value": "2022-11-16",
+									"description": "required | date format : Y-m-d",
+									"type": "text"
+								},
+								{
+									"key": "end_at",
+									"value": "2022-11-17",
+									"description": "required | date format : Y-m-d | after : start_at",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/events",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Store",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{domain}}/events",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"events"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 05:13:51 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 05:13:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"0c4b745d-9f8e-43cc-b211-9a9eff2479b4\",\n    \"name\": \"Centralized Mobile Parallelism\",\n    \"venue\": \"953 Moen Loaf\",\n    \"description\": \"Officiis aut maxime inventore iusto. Et voluptatem blanditiis amet sequi sed quibusdam consequatur. Quis velit harum voluptas et exercitationem repudiandae qui.\",\n    \"start_at\": \"2022-12-13\",\n    \"end_at\": \"2022-12-15\",\n    \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n    \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Justin Bieber Concert Tour 3",
+									"description": "required | string",
+									"type": "text"
+								},
+								{
+									"key": "venue",
+									"value": "Madison Square Garden",
+									"description": "required | string",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "This Justin Bieber's Concert ",
+									"description": "optional | string",
+									"type": "text"
+								},
+								{
+									"key": "start_at",
+									"value": "2022-11-16",
+									"description": "required | format : Y-m-d",
+									"type": "text"
+								},
+								{
+									"key": "end_at",
+									"value": "2022-11-17",
+									"description": "required | format : Y-m-d",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/events/38d78c38-79af-46fa-b364-47b284e9d074",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"events",
+								"38d78c38-79af-46fa-b364-47b284e9d074"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Justin Bieber Concert Tour UPDATE",
+											"type": "text"
+										},
+										{
+											"key": "venue",
+											"value": "Madison Square Garden UPDATE",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "This Justin Bieber's Concert ",
+											"type": "text"
+										},
+										{
+											"key": "start_at",
+											"value": "2022-11-16",
+											"type": "text"
+										},
+										{
+											"key": "end_at",
+											"value": "2022-11-17",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/events/0c4b745d-9f8e-43cc-b211-9a9eff2479b4",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"events",
+										"0c4b745d-9f8e-43cc-b211-9a9eff2479b4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 06:15:01 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 06:15:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Update Success\",\n    \"data\": {\n        \"id\": \"0c4b745d-9f8e-43cc-b211-9a9eff2479b4\",\n        \"name\": \"Centralized Mobile Parallelism\",\n        \"slug\": \"centralized-mobile-parallelism\",\n        \"venue\": \"953 Moen Loaf\",\n        \"description\": \"Officiis aut maxime inventore iusto. Et voluptatem blanditiis amet sequi sed quibusdam consequatur. Quis velit harum voluptas et exercitationem repudiandae qui.\",\n        \"start_at\": \"2022-12-13\",\n        \"end_at\": \"2022-12-15\",\n        \"created_at\": \"2022-11-16T05:08:05.000000Z\",\n        \"updated_at\": \"2022-11-16T05:08:05.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Justin Bieber Concert Tour 3",
+											"type": "text"
+										},
+										{
+											"key": "venue",
+											"value": "Madison Square Garden",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "This Justin Bieber's Concert ",
+											"type": "text"
+										},
+										{
+											"key": "start_at",
+											"value": "2022-11-16",
+											"type": "text"
+										},
+										{
+											"key": "end_at",
+											"value": "2022-11-17",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/events/1",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"events",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 06:26:48 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 06:26:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Create Success\",\n    \"data\": {\n        \"name\": \"Justin Bieber Concert Tour 3\",\n        \"venue\": \"Madison Square Garden\",\n        \"description\": \"This Justin Bieber's Concert\",\n        \"start_at\": \"2022-11-16\",\n        \"end_at\": \"2022-11-17\",\n        \"slug\": \"justin-bieber-concert-tour-3\",\n        \"id\": \"6f4e71c6-08f4-47e5-b954-0e7c3e76d815\",\n        \"updated_at\": \"2022-11-16T06:26:48.000000Z\",\n        \"created_at\": \"2022-11-16T06:26:48.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Patch",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Justin Bieber Concert Tour TEST PATCH",
+									"type": "text"
+								},
+								{
+									"key": "venue",
+									"value": "Madison Square Garden",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "This Justin Bieber's Concert ",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "start_at",
+									"value": "2022-11-16",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "end_at",
+									"value": "2022-11-17",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/events/999",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"events",
+								"999"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Patch",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Justin Bieber Concert Tour 3 PATCH ",
+											"type": "text"
+										},
+										{
+											"key": "venue",
+											"value": "Madison Square Garden PATCH ",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "This Justin Bieber's Concert ",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "start_at",
+											"value": "2022-11-16",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "end_at",
+											"value": "2022-11-17",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/events/38d78c38-79af-46fa-b364-47b284e9d074",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"events",
+										"38d78c38-79af-46fa-b364-47b284e9d074"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 06:28:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 06:28:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Update Success\",\n    \"data\": {\n        \"id\": \"38d78c38-79af-46fa-b364-47b284e9d074\",\n        \"name\": \"Justin Bieber Concert Tour 3 PATCH\",\n        \"slug\": \"justin-bieber-concert-tour-2\",\n        \"venue\": \"Madison Square Garden PATCH\",\n        \"description\": \"This Justin Bieber's Concert\",\n        \"start_at\": \"2022-11-16\",\n        \"end_at\": \"2022-11-17\",\n        \"created_at\": \"2022-11-16T06:24:35.000000Z\",\n        \"updated_at\": \"2022-11-16T06:28:14.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Justin Bieber Concert Tour TEST PATCH",
+											"type": "text"
+										},
+										{
+											"key": "venue",
+											"value": "Madison Square Garden",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "This Justin Bieber's Concert ",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "start_at",
+											"value": "2022-11-16",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "end_at",
+											"value": "2022-11-17",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/events/999",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"events",
+										"999"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 06:28:51 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 06:28:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"No query results for model [App\\\\Models\\\\Event] 999\",\n    \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\NotFoundHttpException\",\n    \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n    \"line\": 391,\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n            \"line\": 367,\n            \"function\": \"prepareException\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Pipeline.php\",\n            \"line\": 51,\n            \"function\": \"render\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 143,\n            \"function\": \"handleException\",\n            \"class\": \"Illuminate\\\\Routing\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings.php\",\n            \"line\": 50,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\SubstituteBindings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 126,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 102,\n            \"function\": \"handleRequest\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 54,\n            \"function\": \"handleRequestUsingNamedLimiter\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 728,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 705,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 669,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 658,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 190,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 141,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull.php\",\n            \"line\": 31,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ConvertEmptyStringsToNull\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings.php\",\n            \"line\": 40,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TrimStrings\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance.php\",\n            \"line\": 86,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\PreventRequestsDuringMaintenance\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\HandleCors.php\",\n            \"line\": 62,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Http\\\\Middleware\\\\TrustProxies.php\",\n            \"line\": 39,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 180,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Http\\\\Middleware\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 116,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 165,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 134,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\public\\\\index.php\",\n            \"line\": 52,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\Users\\\\ACER\\\\Desktop\\\\Work\\\\Work\\\\Study\\\\laravel-coding-test-level-1\\\\event_app\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\resources\\\\server.php\",\n            \"line\": 16,\n            \"function\": \"require_once\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Justin Bieber Concert Tour 3",
+									"type": "text"
+								},
+								{
+									"key": "venue",
+									"value": "Madison Square Garden",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "This Justin Bieber's Concert ",
+									"type": "text"
+								},
+								{
+									"key": "start_at",
+									"value": "2022-11-16",
+									"type": "text"
+								},
+								{
+									"key": "end_at",
+									"value": "2022-11-17",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/events/cdd0e310-fcc1-447b-8550-f87a8a0a0628",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"events",
+								"cdd0e310-fcc1-447b-8550-f87a8a0a0628"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Copy",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Justin Bieber Concert Tour 3",
+											"type": "text"
+										},
+										{
+											"key": "venue",
+											"value": "Madison Square Garden",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "This Justin Bieber's Concert ",
+											"type": "text"
+										},
+										{
+											"key": "start_at",
+											"value": "2022-11-16",
+											"type": "text"
+										},
+										{
+											"key": "end_at",
+											"value": "2022-11-17",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/events/38d78c38-79af-46fa-b364-47b284e9d074",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"events",
+										"38d78c38-79af-46fa-b364-47b284e9d074"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 06:29:38 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 06:29:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Delete Success\",\n    \"data\": {\n        \"id\": \"38d78c38-79af-46fa-b364-47b284e9d074\",\n        \"name\": \"Justin Bieber Concert Tour 3 PATCH\",\n        \"slug\": \"justin-bieber-concert-tour-2\",\n        \"venue\": \"Madison Square Garden PATCH\",\n        \"description\": \"This Justin Bieber's Concert\",\n        \"start_at\": \"2022-11-16\",\n        \"end_at\": \"2022-11-17\",\n        \"created_at\": \"2022-11-16T06:24:35.000000Z\",\n        \"updated_at\": \"2022-11-16T06:28:14.000000Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "user1@example.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/login",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user1@example.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "user123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/login",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 15:00:20 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 15:00:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"user\": {\n            \"id\": 2,\n            \"email\": \"user1@example.com\",\n            \"name\": \"User1 Ryann Gottlieb\",\n            \"phone_number\": \"+1-475-279-3721\"\n        },\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDkzMGU2ZTJlYTBjNzBmZjM1M2ZjMzhhMmZlY2YyNWUwOWNhNjIwOTMzODIxMzViYWMwYTE3YTg1MjM1NTZiMGNmZTNmN2EyYWUxNGI4NGUiLCJpYXQiOjE2Njg2MTA4MjAuMjQyNTc4LCJuYmYiOjE2Njg2MTA4MjAuMjQyNTgsImV4cCI6MTY4NDI0OTIyMC4yMzcxMDQsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.wRIiv63FV3UFWYICnhpuXSIGJyaAxjURRvcrFyssxK0UMYh-q3j3kP_0AkkzHw2Z5zzrfk8-bNnYbCr0VwRd0-0Vewu6K09wSy_pz-vZjPXWwTVRFiNIpwdMxXFt0pIMsVDkg4eTS7L17gsYjc1Q288G79I-mo1e-yw0MSDQTUAb7Z_79mqqmmZ6TlvTgYl2U3zdc3P3KG5BpCGPjMz8ZSPOnvZwGw9BtF4ZRf1IYXk-Qwc10pp7TpKuLFVd23CiPhHbBHSo6Mb51aNmvLCQLpHzDn2eCR1lXEefozpiVnD6F59_CGdLMCAIdfibSrm4vWAtMqi7B7LG4Ca-r_U-MwhltpGCZAo-1mqozaLyZn366YrPyoGeQSxd55KYxfJ-nFGrSDS1qqWPzApfB1zqQ3yTdiarPZvOAy1ukxRH53ALVv-T8Xk9ekCATXWstRfMduPlqNXGk9NoDhZHLNQJfDSarsOwd9cQI0Ss_Qrk3kOlrbmysyhedhPjDc-SwQzAyaA96-MvZjZYln0GXFHxM6Qwi7fy-zVIZo3LXbrocjjlkK4hLdqfgSgYMXxaqjWJ8dwDWha7SaHcERqV2uXZEFVM_zVj9mNuGJvGOjwPV8qYh_PwpwYngG76qfEVPCo36qzGyxDlEik4nuMzsSY7nMTeWQCVcLDOAXPuwvpAWF4\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Justin Drew Bieber",
+									"description": "required | string",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "justinbieber@mail.com",
+									"description": "required | email",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "user123",
+									"description": "required | min : 6",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Street in New York",
+									"description": "required ",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "2022-11-16",
+									"description": "required | format : Y-m-d",
+									"type": "text"
+								},
+								{
+									"key": "place_of_birth",
+									"value": "Canada",
+									"description": "required | string",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "12345677",
+									"description": "optional | integer",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/register",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Justin Drew Bieber",
+											"description": "required | string",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "justinbieber@mail.com",
+											"description": "required | email",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "user123",
+											"description": "required | min : 6",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Street in New York",
+											"description": "required ",
+											"type": "text"
+										},
+										{
+											"key": "date_of_birth",
+											"value": "2022-11-16",
+											"description": "required | format : Y-m-d",
+											"type": "text"
+										},
+										{
+											"key": "place_of_birth",
+											"value": "Canada",
+											"description": "required | string",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "12345677",
+											"description": "optional | integer",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/register",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 15:22:45 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 15:22:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Register Success\",\n    \"data\": {\n        \"name\": \"Justin Drew Bieber\",\n        \"email\": \"justinbieber@mail.com\",\n        \"address\": \"Street in New York\",\n        \"date_of_birth\": \"2022-11-16\",\n        \"place_of_birth\": \"Canada\",\n        \"phone_number\": \"12345677\",\n        \"updated_at\": \"2022-11-16T15:22:45.000000Z\",\n        \"created_at\": \"2022-11-16T15:22:45.000000Z\",\n        \"id\": 7\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "user1@example.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/logout",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user1@example.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "user123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/logout",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 15:13:37 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 15:13:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Logout Success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "User Token",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "user1@example.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/logout",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User Token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "user1@example.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "user123",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{domain}}/user-token",
+									"host": [
+										"{{domain}}"
+									],
+									"path": [
+										"user-token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 15:13:13 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 16 Nov 2022 15:13:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.10"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"user\": {\n            \"id\": 2,\n            \"email\": \"user1@example.com\",\n            \"name\": \"User1 Ryann Gottlieb\",\n            \"phone_number\": \"+1-475-279-3721\"\n        },\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZTAyMDE2YmI1ZjNjNjJmNWVlYTU0YjYzZTVkM2M3ODUyNzllNmMyODhjMjJkNWQ1ZGIwN2Q0YzhmNzNlN2E3NTg5Y2MzODRiZjNlODVmMjkiLCJpYXQiOjE2Njg2MTE1OTMuOTE0NzY4LCJuYmYiOjE2Njg2MTE1OTMuOTE0NzcsImV4cCI6MTY4NDI0OTk5My45MTE4NTcsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.P8TZHB0kwpxS0cLgcxANMas3WyxSe4R77uhE_rAn3JIbDp_fYJI6D-rX1IcIEjZWLu7cGaKpNKsBft51EJCqq6Y9u9bGb0mlEo03qz_73qezfgDUbfJh2wYj_yjky5TD6Ls47lKiHSMl5SxYN5MQQYH4WyhojqkP_UtiBjQjZwvzt63DhHCxD7CrI2mBjRhh3p39WXvmdqK2EUAXWN_ABqLbM_8sg6wa5X1PacrAaVXmb-A6CfxH2E8IfV6gKZXxertCtGc0Tm1Bi_oiDcb5_HG9ePeVwncU5Wdh1EspwSuRFNeNIxm23TYQT7Eav8_lmESpJbn8MJQn6nZwPSDWI-gn9vhvLajEgNuY6zgllHqRqUgh2blVnWL7KZlfklydQmmrgSwOfp-T6Qa3TCw2Ta9JzCYTn_ZKSIJ-SIQzuiAmGAvm1ThdoPwTdhXSRS-I64w4BGenpfQuQ3-TKvwKtX5cfHHB_X74wHXqNHbYGn_W63xKuOsdizSvJaZ7LvT2fWZ3pf9RpC0Lma14ackTsuVKRMQiCUpyXMzJLiL1uv-6lhKWNByodjDGSniu-BzkleiFfDcAlhEKUekeqSbyneqy39FrlqLWGWikOSM7w6UK20Mx9yRJLHDXPgaVuFY5BMoQYXE6MF3Of7RrVkJP-Urv7wQGsbVdIaStyUZee1k\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
